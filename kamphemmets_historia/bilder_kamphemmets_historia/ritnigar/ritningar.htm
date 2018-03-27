@@ -1,0 +1,45 @@
+<table border="0" cellspacing="1" width="100%" id="AutoNumber2">
+  <tr>
+    <td width="100%">
+    <p align="left">
+<font face="Arial"><font size="4">Ritning över Kamphemmet vid olika tider:</font>&nbsp;&nbsp;&nbsp;
+<input type="radio" value="V2" checked name="R1" onClick="checkIt(1)">1800-talet&nbsp;
+<input type="radio" value="V3" name="R1" onClick="checkIt(2)">1928&nbsp;&nbsp;&nbsp;
+<input type="radio" value="V4" name="R1" onClick="checkIt(3)">1963&nbsp;&nbsp;&nbsp;
+<input type="radio" value="V5" name="R1" onClick="checkIt(4)">1990</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+<script language="Javascript">
+<!--
+// Script made by: Dan L.
+
+var current = 0;
+
+function initArray() {
+this.length = initArray.arguments.length;
+  for (var i = 0; i < this.length; i++) {
+   this[i] = initArray.arguments[i];
+  }
+}
+
+var picz = new initArray(
+"rit1.gif",
+"rit2.gif",
+"rit3.gif",
+"rit4.gif"
+);
+
+document.write('<img name="jscriptimg" src="'+picz[0]+'">');
+
+function checkIt(val) {
+ var goodnum = val-1;
+ if (goodnum < 0) alert("undefined ");
+ else if (goodnum > picz.length-1) alert("undefined ");
+ else document.jscriptimg.src = picz[goodnum];
+ current = goodnum;
+}//-->
+    </script>
+    </td>
+  </tr>
+</table>
